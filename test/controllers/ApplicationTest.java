@@ -104,7 +104,7 @@ public class ApplicationTest {
 	}
 	
 	@After
-	public void tearDown() {
+	public void close() {
         entityManager.getTransaction().commit();
         JPA.bindForCurrentThread(null);
         entityManager.close();
